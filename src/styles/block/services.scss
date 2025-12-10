@@ -1,0 +1,161 @@
+.main__services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 224px;
+  justify-items: stretch;
+  padding-block: 148px;
+
+  @include header-padding-inline;
+
+  @include on-mobile {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 48px;
+    padding-block: 120px;
+  }
+
+  @include on-tablet {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 56px;
+  }
+
+  @include on-small-desktop {
+    gap: 174px;
+  }
+
+  &-head {
+    padding-top: 103px;
+
+    @include on-mobile {
+      padding-top: 0;
+    }
+
+    @include on-tablet {
+      padding-top: 0;
+      width: 266px;
+    }
+
+    &-navtitle {
+      @include navtitle;
+
+      color: $color-text-navtitle;
+      margin: 0;
+    }
+
+    &-title {
+      @include title;
+
+      font-size: 32px;
+      line-height: 130%;
+      margin-top: 16px;
+    }
+
+    &-description {
+      @include description;
+
+      margin-top: 24px;
+    }
+  }
+
+  &-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include on-mobile {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 24px;
+    }
+
+    @include on-tablet {
+      margin-top: -152px;
+    }
+
+    @include on-small-desktop {
+      gap: 20px;
+    }
+
+    &-block {
+      display: block;
+      width: 264px;
+      height: 264px;
+      border-radius: $border-radius-block-box;
+      padding: 32px;
+      background-color: $bc-block-box-color;
+
+      @include hover(transform, scale(1.1));
+
+      @include on-small-desktop {
+        width: 214px;
+        height: 264px;
+      }
+
+      &:first-child {
+        margin-top: 132px;
+
+        @include on-mobile {
+          margin-top: 0;
+        }
+      }
+
+      &:last-child {
+        margin-top: -132px;
+
+        @include on-mobile {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.block {
+  &__head {
+    display: flex;
+    height: 24px;
+    width: 46px;
+    border-radius: 23px;
+    background-color: rgba(32, 96, 246, 0.1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    &-title {
+      font-family: $font-family-h-nav-btn;
+      font-weight: $font-weight-h;
+      font-size: 13px;
+      line-height: 100%;
+      color: $bc-color-btn;
+    }
+  }
+
+  &__description {
+    margin-top: 24px;
+    text-wrap: nowrap;
+
+    @include description-block-quotes;
+
+    color: $color-text-main-p;
+    font-size: 13px;
+  }
+
+  &__button {
+    display: flex;
+    margin-top: 32px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: start;
+    gap: 16px;
+
+    &--arrow {
+      background-image: url(/src/images/arrow/arrow-round.png);
+      height: 40px;
+      width: 40px;
+      background-size: cover;
+    }
+
+    &--text {
+      // text-decoration: underline;
+      @include arrow-text;
+    }
+  }
+}

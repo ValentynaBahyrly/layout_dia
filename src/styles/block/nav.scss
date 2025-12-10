@@ -9,15 +9,20 @@
   &__link {
     position: relative;
     display: flex;
-    box-sizing: border-box;
     align-items: center;
-    color: $color-text-header;
-    text-decoration: none;
-    text-transform: $text-transform-nav;
     white-space: nowrap;
-    font-family: $font-family-h-nav-btn;
-    font-weight: $font-weight-nav-btn-p;
-    font-size: $font-size-nav;
-    letter-spacing: $letter-spacing-nav-title;
+    text-decoration: none;
+
+    @include navtitle;
+
+    color: $color-text-hdr-nav-ftr;
+  }
+
+  @include on-mobile {
+    display: none;
+  }
+
+  @include on-tablet {
+    display: none;
   }
 }

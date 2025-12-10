@@ -1,0 +1,52 @@
+.menu {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include header-padding-inline;
+  }
+
+  &__mb-tab {
+    @include on-mobile {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include on-tablet {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__logo-image {
+    display: inline-flex;
+    max-height: 28px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    display: none;
+
+    @include on-mobile {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 32px;
+    }
+
+    @include on-tablet {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 32px;
+    }
+
+    @include on-small-desktop {
+      display: none;
+    }
+  }
+}

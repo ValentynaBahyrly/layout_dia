@@ -1,0 +1,106 @@
+.main__cta {
+  background-color: $bc-body-second-color;
+
+  &-block {
+    padding: 198px 423px 170px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url(/src/images/cta/shapes.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: -1;
+
+      @include on-mobile {
+        display: none;
+      }
+
+      @include on-tablet {
+        background-image: url(/src/images/cta/shapes-on-tablet.png);
+        width: 1057px;
+        height: 508px;
+
+        overflow: hidden;
+        left: -225px;
+        top: 63px;
+      }
+
+      @include on-small-desktop {
+        width: 1297px;
+        height: 489px;
+        overflow: hidden;
+        left: -137px;
+        top: 83px;
+      }
+    }
+
+    @include on-mobile {
+      padding: 72px 20px;
+    }
+
+    @include on-tablet {
+      padding: 200px 41px;
+    }
+
+    @include on-small-desktop {
+      padding: 198px 135px;
+    }
+
+    @include on-large-screens {
+      padding: 198px 903px;
+    }
+
+    &-title {
+      @include title;
+
+      font-size: 52px;
+      line-height: 150%;
+      text-wrap: nowrap;
+      margin: auto;
+
+      @include on-mobile {
+        font-size: 44px;
+        line-height: 120%;
+        white-space: normal;
+      }
+
+      @include on-tablet {
+        font-size: 52px;
+        line-height: 120%;
+        white-space: normal;
+      }
+    }
+
+    &-description {
+      @include description-block-quotes;
+
+      margin-top: 24px;
+      font-size: 24px;
+      color: $color-text-main-p;
+
+      @include on-mobile {
+        font-size: 22px;
+      }
+    }
+
+    &-button {
+      height: 56px;
+      width: 264px;
+      margin-top: 64px;
+
+      @include button;
+
+      @include on-mobile {
+        width: 100%;
+        margin-top: 56px;
+      }
+    }
+  }
+}
