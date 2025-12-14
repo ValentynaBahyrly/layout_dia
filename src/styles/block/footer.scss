@@ -1,22 +1,25 @@
 .footer {
   background-color: $bc-body-second-color;
 
+  @include on-mobile {
+    background-color: $bc-body-main-color;
+  }
+
   &__container {
     display: block;
-    padding-top: 180px;
     padding-bottom: 80px;
     background-color: $bc-hero-color;
     border-radius: $border-radius-hero $border-radius-hero 0 0;
     justify-items: stretch;
 
     @include on-mobile {
-      padding-top: 72px;
+      margin-top: 120px;
     }
   }
 
   &__send-us {
     @include on-tablet {
-      width: 362px;
+      width: 56%;
     }
   }
 
@@ -25,12 +28,14 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 226px;
     justify-items: stretch;
+    padding-top: 180px;
 
     @include header-padding-inline;
 
     @include on-mobile {
       grid-template-columns: repeat(1, 1fr);
       gap: 80px;
+      padding-top: 72px;
     }
 
     @include on-tablet {
@@ -45,9 +50,9 @@
   }
 
   &__title {
-    @include footer-title;
-
     font-size: 32px;
+
+    @include footer-title;
 
     @include on-mobile {
       line-height: 130%;
@@ -105,10 +110,16 @@
       align-items: center;
       white-space: nowrap;
       text-decoration: none;
+      color: $color-text-hdr-nav-ftr;
 
       @include navtitle;
+      @include hover(transform, scale($scale-nav-logo));
 
-      color: $color-text-hdr-nav-ftr;
+      &:hover {
+        border-bottom: 1px solid $bc-color-btn;
+
+        @include hover(transform, scale($scale-nav-logo));
+      }
     }
   }
 }

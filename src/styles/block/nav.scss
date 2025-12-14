@@ -12,10 +12,14 @@
     align-items: center;
     white-space: nowrap;
     text-decoration: none;
+    color: $color-text-hdr-nav-ftr;
 
     @include navtitle;
+    @include hover(transform, scale($scale-nav-logo));
 
-    color: $color-text-hdr-nav-ftr;
+    &:hover {
+      border-bottom: 1px solid $bc-color-btn;
+    }
   }
 
   @include on-mobile {

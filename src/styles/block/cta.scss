@@ -7,39 +7,8 @@
     position: relative;
     z-index: 1;
     margin: 0 auto;
-
-    &::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url(/src/images/cta/shapes.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      z-index: -1;
-
-      @include on-mobile {
-        display: none;
-      }
-
-      @include on-tablet {
-        background-image: url(/src/images/cta/shapes-on-tablet.png);
-        width: 1057px;
-        height: 508px;
-
-        overflow: hidden;
-        left: -225px;
-        top: 63px;
-      }
-
-      @include on-small-desktop {
-        width: 1297px;
-        height: 489px;
-        overflow: hidden;
-        left: -137px;
-        top: 83px;
-      }
-    }
+    max-width: 1600px;
+    width: 100%;
 
     @include on-mobile {
       padding: 72px 20px;
@@ -53,8 +22,29 @@
       padding: 198px 135px;
     }
 
-    @include on-large-screens {
-      padding: 198px 903px;
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url(/src/images/cta/shapes.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right center;
+      pointer-events: none;
+      overflow: hidden;
+      max-width: 1600px;
+      z-index: -1;
+
+      @include on-mobile {
+        display: none;
+      }
+
+      @include on-tablet {
+        // max-width: 640px;
+        transform:
+        // scale(1.35)
+          translateX(-5%) translateY(-2%);
+      }
     }
 
     &-title {

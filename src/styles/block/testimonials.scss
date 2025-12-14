@@ -21,6 +21,12 @@
     font-size: 32px;
     line-height: 130%;
     margin-top: 16px;
+
+    @include on-mobile {
+      br {
+        display: none;
+      }
+    }
   }
 
   &-container {
@@ -49,33 +55,28 @@
     &-box {
       display: flex;
       flex-direction: column;
-      width: 362px;
+      width: 100%;
       height: 494px;
       border-radius: $border-radius-block-box;
-      padding-inline: 56px;
       padding-block: 32px;
       background-color: $bc-block-box-color;
       align-items: center;
       justify-content: space-between;
+      margin-inline: auto;
+      padding-inline: 15%;
 
       @include hover(transform, scale(1.05));
 
       @include on-mobile {
-        width: 280px;
         height: 456px;
-        padding-inline: 42px;
       }
 
       @include on-tablet {
-        width: 558px;
         height: 478px;
-        padding-inline: 98px;
       }
 
       @include on-small-desktop {
-        width: 292px;
         height: 456px;
-        padding-inline: 48px;
       }
     }
   }

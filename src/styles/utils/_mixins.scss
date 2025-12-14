@@ -36,22 +36,20 @@
 }
 
 @mixin header-padding-inline() {
-  padding-inline: 227px;
+  padding-inline: 120px;
+  max-width: 1600px;
+  margin-inline: auto;
 
   @include on-mobile {
     padding-inline: 20px;
   }
 
   @include on-tablet {
-    padding-inline: 41px;
+    padding-inline: 40px;
   }
 
   @include on-small-desktop {
-    padding-inline: 54px;
-  }
-
-  @include on-large-screens {
-    padding-inline: 707px;
+    padding-inline: 80px;
   }
 }
 

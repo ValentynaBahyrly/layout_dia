@@ -6,9 +6,11 @@
   @include header-padding-top;
 
   &__inner {
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
     position: relative;
+
+    @include header-padding-inline;
   }
 
   &__button {
@@ -23,6 +25,8 @@
     font-weight: $font-weight-nav-btn;
     font-size: $font-size-p;
     letter-spacing: $letter-spacing-nav-title;
+
+    @include hover(transform, scale($scale-nav-logo));
 
     &::after {
       content: '';

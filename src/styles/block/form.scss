@@ -9,8 +9,12 @@
 
   @include footer-title;
 
-  &:hover {
-    border-bottom: 1px solid $bc-color-btn;
+  &:first-of-type {
+    margin-top: 56px;
+
+    @include on-mobile {
+      margin-top: 48px;
+    }
   }
 
   &:focus-visible {
@@ -19,16 +23,12 @@
     color: #fff;
   }
 
-  @include on-mobile {
-    margin-top: 40px;
+  &:hover {
+    border-bottom: 1px solid $bc-color-btn;
   }
 
-  &:first-of-type {
-    margin-top: 56px;
-
-    @include on-mobile {
-      margin-top: 48px;
-    }
+  @include on-mobile {
+    margin-top: 40px;
   }
 }
 

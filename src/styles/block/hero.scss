@@ -14,7 +14,7 @@
 
   @include on-tablet {
     grid-template-columns: repeat(1, 1fr);
-    row-gap: 147px;
+    row-gap: 0;
   }
 
   @include on-small-desktop {
@@ -22,8 +22,6 @@
   }
 
   &-container-01 {
-    @include header-padding-inline;
-
     @include on-small-desktop {
       padding-right: 0;
     }
@@ -31,6 +29,9 @@
     @include on-large-screens {
       padding-right: 0;
     }
+  }
+  &-container-02 {
+    position: relative;
   }
 
   &-title {
@@ -74,37 +75,52 @@
     height: 50px;
     width: 264px;
     margin-top: 83px;
+    margin-bottom: 205px;
 
     @include button;
 
     @include on-mobile {
       width: 100%;
       margin-top: 72px;
+      margin-bottom: 0;
     }
 
     @include on-tablet {
       width: 264px;
       margin-top: 56px;
+      margin-bottom: 147px;
     }
   }
 
   &-slider {
     display: flex;
     background-image: url(../images/slider/slide-img-01.jpg);
-    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     border-radius: $border-radius-hero 0 $border-radius-hero 0;
     width: 100%;
-    min-height: 680px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
 
     @include on-mobile {
       min-height: 390px;
       border-radius: $border-radius-hero;
+      position: static;
+      width: 100%;
+      transform: none; // +
     }
 
     @include on-tablet {
       min-height: 390px;
       border-radius: $border-radius-hero;
+      position: static;
+      width: 100%;
+      transform: none; // +
+    }
+
+    @include on-large-screens {
     }
   }
 

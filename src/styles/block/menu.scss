@@ -3,8 +3,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    @include header-padding-inline;
   }
 
   &__mb-tab {
@@ -26,6 +24,8 @@
     max-height: 28px;
     align-items: center;
     justify-content: center;
+
+    @include hover(transform, scale($scale-nav-logo));
   }
 
   &__icon {

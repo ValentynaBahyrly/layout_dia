@@ -43,6 +43,8 @@
       width: 32px;
       cursor: pointer;
 
+      @include hover(transform, scale(1.2));
+
       &:hover {
         filter: invert(50%) sepia(100%) saturate(4500%) hue-rotate(200deg)
           brightness(100%) contrast(100%);
