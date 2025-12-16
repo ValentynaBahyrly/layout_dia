@@ -29,6 +29,8 @@
     gap: 226px;
     justify-items: stretch;
     padding-top: 180px;
+    margin: 0 auto;
+    max-width: $large-screens-min-width;
 
     @include header-padding-inline;
 
@@ -67,6 +69,9 @@
       display: flex;
       align-items: start;
       justify-content: space-between;
+
+      margin: 0 auto;
+      max-width: $large-screens-min-width;
 
       @include header-padding-inline;
 
@@ -116,7 +121,7 @@
       @include hover(transform, scale($scale-nav-logo));
 
       &:hover {
-        border-bottom: 1px solid $bc-color-btn;
+        border-bottom: 1px solid $bc-color-btn-hoover;
 
         @include hover(transform, scale($scale-nav-logo));
       }

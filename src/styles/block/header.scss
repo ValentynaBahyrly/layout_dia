@@ -3,14 +3,20 @@
   background-color: $bc-hero-color;
   border-radius: 0 0 $border-radius-hero $border-radius-hero;
 
-  @include header-padding-top;
-
   &__inner {
-    width: 100%;
-    margin: 0 auto;
     position: relative;
+    margin: 0 auto;
+    max-width: $desktop-min-width;
 
     @include header-padding-inline;
+
+    @include on-small-desktop {
+      max-width: $small-desktop-min-width;
+    }
+
+    @include on-large-screens {
+      max-width: $large-screens-min-width;
+    }
   }
 
   &__button {
@@ -33,7 +39,7 @@
       position: absolute;
       height: 2px;
       width: 100%;
-      background-color: $bc-color-btn;
+      background-color: $bc-color-btn-hoover;
       border-radius: 4px;
       display: block;
       bottom: -8px;

@@ -4,6 +4,8 @@
   gap: 224px;
   justify-items: stretch;
   padding-block: 148px;
+  margin: 0 auto;
+  max-width: $large-screens-min-width;
 
   @include header-padding-inline;
 
@@ -124,7 +126,7 @@
       font-weight: $font-weight-h;
       font-size: 13px;
       line-height: 100%;
-      color: $bc-color-btn;
+      color: $bc-color-btn-hoover;
     }
   }
 

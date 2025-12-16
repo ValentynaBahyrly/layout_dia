@@ -34,13 +34,15 @@
     />
   </head>
   <!-- #endregion -->
-  <!-- #region header-nav -->
+
   <body>
+    <!-- #region header -->
     <header
       class="header"
       id="header"
     >
       <div class="header__inner">
+        <!-- #region header-top: logo + nav + header__button -->
         <div class="menu__container">
           <div class="menu__mb-tab">
             <a
@@ -54,7 +56,6 @@
                 alt="Air logo"
               />
             </a>
-
             <a
               href="#header"
               class="menu__icon"
@@ -68,7 +69,6 @@
               />
             </a>
           </div>
-
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
@@ -113,62 +113,66 @@
           </a>
         </div>
         <!-- #endregion -->
-        <!-- #region header-hero -->
-        <div class="hero__content">
-          <div class="hero__content-container-01">
-            <h1 class="hero__content-title">
-              Strategic
-              <br />
-              Agency
-            </h1>
-            <p class="hero__content-subtitle">
-              We believe in the power of bold ideas that can solve business
-              challenges.
-            </p>
-            <a href="#our-expertise">
-              <button class="hero__content-button">Learn more</button>
-            </a>
-          </div>
-          <div class="hero__content-container-02">
-            <div class="hero__content-slider">
-              <div class="hero__content-slider-bottom">
-                <div class="hero__content-slider-bottom-button-arrow">
-                  <button
-                    class="button-arrow"
-                    type="button"
-                    aria-label="arrow-left"
-                  >
-                    <img
-                      class="arrow"
-                      src="./images/slider/arrow-left.png"
-                      alt="arrow-left"
-                    />
-                  </button>
 
-                  <button
-                    class="button-arrow"
-                    type="button"
-                    aria-label="arrow-right"
-                  >
-                    <img
-                      class="arrow"
-                      src="./images/slider/arrow-right.png"
-                      alt="arrow-right"
-                    />
-                  </button>
-                </div>
-                <div class="hero__content-slider-bottom-description">
-                  <h5 class="hero__content-slider-bottom-description--navtitle">
-                    INTRO
-                  </h5>
-                  <p class="hero__content-slider-bottom-description--subtitle">
-                    By the same illusion which lifts the horizon.
-                  </p>
+        <!-- #region header-hero -->
+        <div class="hero">
+          <div class="hero__content">
+            <div class="hero__left">
+              <h1 class="hero__left-title">
+                Strategic
+                <br />
+                Agency
+              </h1>
+              <p class="hero__left-subtitle">
+                We believe in the power of bold ideas that can solve business
+                challenges.
+              </p>
+              <a href="#our-expertise">
+                <button class="hero__left-button">Learn more</button>
+              </a>
+            </div>
+
+            <div class="hero__right">
+              <div class="hero__right-slider">
+                <div class="hero__right-slider-bottom">
+                  <div class="hero__right-slider-bottom-button-arrow">
+                    <button
+                      class="button-arrow"
+                      type="button"
+                      aria-label="arrow-left"
+                    >
+                      <img
+                        class="arrow"
+                        src="./images/slider/arrow-left.png"
+                        alt="arrow-left"
+                      />
+                    </button>
+                    <button
+                      class="button-arrow"
+                      type="button"
+                      aria-label="arrow-right"
+                    >
+                      <img
+                        class="arrow"
+                        src="./images/slider/arrow-right.png"
+                        alt="arrow-right"
+                      />
+                    </button>
+                  </div>
+                  <div class="hero__right-slider-bottom-description">
+                    <h5 class="hero__right-slider-bottom-description--navtitle">
+                      INTRO
+                    </h5>
+                    <p class="hero__right-slider-bottom-description--subtitle">
+                      By the same illusion which lifts the horizon.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- #endregion -->
       </div>
     </header>
     <!-- #endregion -->
@@ -187,13 +191,11 @@
             solve business challenges.
           </p>
         </article>
-
         <article
           class="main__about-bottom-container"
           id="our-expertise"
         >
           <h2 class="main__about-bottom-title">Our expertise</h2>
-
           <div class="main__about-bottom-container-inner">
             <div class="about-bottom__detail">
               <img
@@ -207,7 +209,6 @@
                 well as verbal and visual ways to deliver it to the audience.
               </p>
             </div>
-
             <div class="about-bottom__detail">
               <img
                 class="about-bottom__detail-img"
@@ -221,7 +222,6 @@
                 movies.
               </p>
             </div>
-
             <div class="about-bottom__detail">
               <img
                 class="about-bottom__detail-img"
@@ -365,7 +365,6 @@
               <div class="box__quotes-ava-frame"></div>
             </div>
             <div class="box__quotes-marks"></div>
-
             <p class="box__quotes-text">
               AIR’s ideas are refreshing and out of the box. Authentic team that
               focuses on the important path of the brand.

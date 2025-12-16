@@ -36,20 +36,39 @@
 }
 
 @mixin header-padding-inline() {
-  padding-inline: 120px;
-  max-width: 1600px;
-  margin-inline: auto;
+  padding-inline: $padding-inline-on-desktop;
 
   @include on-mobile {
-    padding-inline: 20px;
+    padding-inline: $padding-inline-on-mobile;
   }
 
   @include on-tablet {
-    padding-inline: 40px;
+    padding-inline: $padding-inline-on-tablet;
   }
 
   @include on-small-desktop {
-    padding-inline: 80px;
+    padding-inline: $padding-inline-on-small-desktop;
+  }
+
+  @include on-large-screens {
+    max-width: $large-screens-min-width;
+    margin-inline: auto;
+  }
+}
+
+@mixin slider-position {
+  margin-right: 120px;
+
+  @include on-mobile {
+    margin-right: 20px;
+  }
+
+  @include on-tablet {
+    margin-right: 40px;
+  }
+
+  @include on-small-desktop {
+    margin-right: 80px;
   }
 }
 
@@ -139,7 +158,7 @@
 
   &:hover {
     color: $color-text-hdr-nav-ftr;
-    background-color: $bc-color-btn;
+    background-color: $bc-color-btn-hoover;
     border: none;
   }
 }

@@ -16,3 +16,8 @@ p {
 a {
   text-decoration: none;
 }
+
+.site__container {
+  max-width: $large-screens-min-width;
+  margin-inline: auto;
+}

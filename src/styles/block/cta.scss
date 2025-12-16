@@ -7,7 +7,7 @@
     position: relative;
     z-index: 1;
     margin: 0 auto;
-    max-width: 1600px;
+    max-width: $large-screens-min-width;
     width: 100%;
 
     @include on-mobile {
@@ -32,7 +32,7 @@
       background-position: right center;
       pointer-events: none;
       overflow: hidden;
-      max-width: 1600px;
+      max-width: $large-screens-min-width;
       z-index: -1;
 
       @include on-mobile {

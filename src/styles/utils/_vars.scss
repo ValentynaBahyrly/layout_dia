@@ -1,4 +1,5 @@
-$large-screens-min-width: 2560px;
+$large-screens-max-width: 2560px;
+$large-screens-min-width: 1600px;
 $desktop-max-width: 1559.98px;
 $desktop-min-width: 1280px;
 $small-desktop-max-width: 1279.98px;
@@ -25,8 +26,8 @@ $text-transform-nav: uppercase;
 $border-radius-hero: 30px;
 $border-radius-btn: 8px;
 $border-radius-block-box: 16px;
-$bc-color-btn: #2060f6; // hoover
-$color-text-hdr-nav-ftr: #fff; // +footer
+$bc-color-btn-hoover: #2060f6; // hoover
+$color-text-hdr-nav-ftr: #fff;
 $color-text-main-h: #253757;
 $color-text-main-p: #6c788b;
 $color-text-navtitle: #c0cdd7;
@@ -34,3 +35,13 @@ $font-size-btn: 15px;
 $line-height-body: 150%;
 $hover-effect-duration: 0.3s;
 $scale-nav-logo: 1.15;
+$padding-inline-on-mobile: 20px;
+$padding-inline-on-tablet: 40px;
+$padding-inline-on-small-desktop: 80px;
+$padding-inline-on-desktop: 120px;
+$small-desktop-inline: (
+  calc($small-desktop-min-width + 2 * $padding-inline-on-small-desktop)
+);
+$large-screens-inline: (
+  calc($large-screens-min-width + 2 * $padding-inline-on-desktop)
+);

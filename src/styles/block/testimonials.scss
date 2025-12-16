@@ -1,6 +1,8 @@
 .main__testimonials {
   display: block;
   padding-bottom: 148px;
+  margin: 0 auto;
+  max-width: $large-screens-min-width;
 
   @include header-padding-inline;
 
@@ -130,7 +132,7 @@
         left: -3px;
         width: 139px;
         height: 56px;
-        background: $bc-color-btn;
+        background: $bc-color-btn-hoover;
         border-radius: 12px;
         transform: rotate(-60deg);
 
@@ -156,7 +158,7 @@
         right: -3px;
         width: 139px;
         height: 56px;
-        background: $bc-color-btn;
+        background: $bc-color-btn-hoover;
         border-radius: 12px;
         transform: rotate(-60deg);
 

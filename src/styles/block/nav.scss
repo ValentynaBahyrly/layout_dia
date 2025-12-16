@@ -18,7 +18,7 @@
     @include hover(transform, scale($scale-nav-logo));
 
     &:hover {
-      border-bottom: 1px solid $bc-color-btn;
+      border-bottom: 1px solid $bc-color-btn-hoover;
     }
   }
 

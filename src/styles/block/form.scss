@@ -19,12 +19,12 @@
 
   &:focus-visible {
     outline: none;
-    border-color: $bc-color-btn;
+    border-color: $bc-color-btn-hoover;
     color: #fff;
   }
 
   &:hover {
-    border-bottom: 1px solid $bc-color-btn;
+    border-bottom: 1px solid $bc-color-btn-hoover;
   }
 
   @include on-mobile {
